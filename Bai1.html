@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm trung bình và tổng điểm học sinh</title>
+</head>
+<body>
+    <script>
+        var vatly ;
+        var hoahoc ;
+        var sinhhoc;
+
+        vatly = prompt("Điểm môn vật lý");
+        hoahoc = prompt("Điểm môn hóa học");
+        sinhhoc = prompt("Điểm môn sinh học");
+
+        let a = parseInt(vatly);
+        let b = parseInt(hoahoc);
+        let c = parseInt(sinhhoc);
+
+        let tongdiem=a+b+c;
+        let diemtrungbinh=(a+b+c)/3;
+
+        document.write("Điểm Trung Bình =" + diemtrungbinh);
+        document.write("Tổng điểm =" + tongdiem);
+    </script>
+</body>
+</html>
