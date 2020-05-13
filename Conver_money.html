@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        .col-25 {
+            float: left;
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="col-25">
+        <label for="txtAmount">Amount</label>
+    </div>
+    <div class="col-25">
+        <label for="sltFrom">From Currency</label>
+    </div>
+    <div class="col-25">
+        <label for="sltTo">To Currency</label>
+    </div>
+    <br>
+
+</div>
+
+<div>
+    <div class="col-25">
+        <input type="text" id="txtAmount" name="amount">
+    </div>
+    <div class="col-25">
+        <select name="from" id="sltFrom">
+            <option value="VND">Viet Nam Dong</option>
+            <option value="USD">US Dollar</option>
+        </select>
+    </div>
+    <div class="col-25">
+        <select name="to" id="sltTo">
+            <option value="USD">US Dollar</option>
+            <option value="VND">Viet Nam Dong</option>
+        </select>
+    </div>
+</div>
+<div class="col-25">
+    <button type="button" onclick="convert();">Convert</button>
+</div>
+<div>
+    <div>
+        <label for="txtResult" style="color: blue" id="lblResult">Result: </label>
+    </div>
+</div>
+
+<script>
+    function convert() {
+        let a = parseInt(document.getElementById("txtAmount").value);
+        let from = document.getElementById("sltFrom").value;
+        let to = document.getElementById("sltTo").value;
+        let result;
+        let rate1 = 1;
+        let rate2 = 1;
+        if (from == "USD") {
+            rate1 = 1;
+        } else {
+            rate1 = 23000;
+        }
+        if (to == "USD") {
+            rate2 = 1
+        } else {
+            rate2 = 23000;
+        }
+        result = a * rate2 / rate1
+        document.getElementById("lblResult").innerHTML = "Result: " + result
+    }
+</script>
+</body>
+</html>
