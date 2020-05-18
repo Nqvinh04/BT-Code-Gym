@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+</head>
+<body onload="image()">
+<form id>
+    <img src="" onclick="click_1" id="img1">
+    <img src="" onclick="click_2" id="img2">
+    <img src="" onclick="click_3" id="img3">
+    <img src="" onclick="click_4" id="img4">
+    <img src="" onclick="click_5" id="img5">
+</form>
+</body>
+<script>
+    const panda_1 = "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg";
+    const panda_2 = "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg";
+    const panda_3 = "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg";
+    const panda_4 = "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg";
+    const panda_5 = "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part5x1.jpg";
+    const cat_1 = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg";
+    const cat_2 = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg";
+    const cat_3 = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg";
+    const cat_4 = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg";
+    const cat_5 = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg";
+    const monkey_1 = "https://demo.codegym.vn/8/puzzlegame/img/monkey_part1x1.jpg";
+    const monkey_2 = "https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg";
+    const monkey_3 = "https://demo.codegym.vn/8/puzzlegame/img/monkey_part3x1.jpg";
+    const monkey_4 = "https://demo.codegym.vn/8/puzzlegame/img/monkey_part4x1.jpg";
+    const monkey_5 = "https://demo.codegym.vn/8/puzzlegame/img/monkey_part5x1.jpg";
+
+    function image() {
+        let src_1 = panda_1;
+        let src_2 = cat_2;
+        let src_3 = monkey_3;
+        let src_4 = panda_4;
+        let src_5 = cat_5;
+        let r1 = random();
+        switch (r1) {
+            case 1:
+                src_1 = panda_1;
+                break;
+            case 2:
+                src_1 = cat_1;
+                break;
+            case 3:
+                src_1 = monkey_1;
+                break
+        }
+        let r2 = random();
+        switch (r2) {
+            case 1:
+                src_1 = panda_2;
+                break;
+            case 2:
+                src_1 = cat_2;
+                break;
+            case 3:
+                src_1 = monkey_3;
+                break
+        }
+        let r1 = random();
+        switch (r1) {
+            case 1:
+                src_1 = panda_1;
+                break;
+            case 2:
+                src_1 = cat_1;
+                break;
+            case 3:
+                src_1 = monkey_1;
+                break
+        }
+        let r1 = random();
+        switch (r1) {
+            case 1:
+                src_1 = panda_1;
+                break;
+            case 2:
+                src_1 = cat_1;
+                break;
+            case 3:
+                src_1 = monkey_1;
+                break
+        }
+        let r1 = random();
+        switch (r1) {
+            case 1:
+                src_1 = panda_1;
+                break;
+            case 2:
+                src_1 = cat_1;
+                break;
+            case 3:
+                src_1 = monkey_1;
+                break
+        }
+    }
+</script>
+</html>

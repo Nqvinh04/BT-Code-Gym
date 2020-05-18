@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App_Good-Fast-Cheap</title>
+</head>
+<body>
+<div>
+    <label class="switch">
+        <input type="checkbox" id="good" onchange="change('good')">
+        <span class=" slider round"></span>
+    </label>
+    <label>GOOD</label>
+</div>
+<div>
+    <label class="switch2">
+        <input type="checkbox" id="cheap" onchange="change('cheap')">
+        <span class="slider2 round"></span>
+    </label>
+    <label>CHEAP</label>
+</div>
+<div>
+    <label class="switch3">
+        <input type="checkbox" id="fast" onchange="change('fast')">
+        <span class=" slider3 round"></span>
+    </label>
+    <label>FAST</label>
+</div>
+</body>
+<script>
+    function random() {
+        let r;
+        r = Math.floor(Math.random() * 2.9);
+        return r;
+    }
+
+    function checkOthers(current) {
+        let result = false;
+        switch (current) {
+            case "good":
+                result = (document.getElementById("cheap").checked  && document.getElementById("fast").checked);
+                break;
+            case "cheap":
+                result = (document.getElementById("good").checked && document.getElementById("fast").checked);
+                break;
+            case "fast":
+                result = (document.getElementById("cheap").checked && document.getElementById("good").checked);
+                break;
+        }
+        return result;
+    }
+
+    function change(current) {
+        switch (current) {
+            case "good":
+                if (checkOthers(current)){
+                    if (random() === 1) {
+                        document.getElementById("cheap").checked = false;
+                    } else {
+                        document.getElementById("fast").checked = false;
+                    }
+                }
+                break;
+            case "cheap":
+                if (checkOthers(current)){
+                    if (random() === 1) {
+                        document.getElementById("good").checked = false;
+                    } else {
+                        document.getElementById("fast").checked = false;
+                    }
+                }
+                break;
+            case "fast":
+                if (checkOthers(current)){
+                    if (random() === 1) {
+                        document.getElementById("good").checked = false;
+                    } else {
+                        document.getElementById("cheap").checked = false;
+                    }
+                }
+                break;
+        }
+    }
+</script>
+</html>

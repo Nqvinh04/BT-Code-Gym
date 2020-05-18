@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="img1" src="image/a1.jpg" height="79" width="304" onclick="changeImage1();"/><br>
+<img id="img2" src="image/b2.jpg" height="79" width="304" onclick="changeImage2();"/><br>
+<img id="img3" src="image/c3.jpg" height="79" width="304" onclick="changeImage3();"/><br>
+<img id="img4" src="image/d2.jpg" height="79" width="304" onclick="changeImage4();"/><br>
+<img id="img5" src="image/g1.jpg" height="79" width="304" onclick="changeImage5();"/><br>
+</body>
+<script>
+    let img1 = document.getElementById("img1");
+    let n = 1;
+    function changeImage1(){
+        n++;
+        img1.src = "image/a"+n+".jpg";
+
+        if(n == 3){
+            n=0;
+        }
+    }
+
+    let img2 = document.getElementById("img2");
+    let n2 = 1;
+    function changeImage2(){
+        n2++;
+        img2.src = "image/b"+n2+".jpg";
+
+        if(n2 == 3){
+            n2 = 0;
+        }
+    }
+
+    let img3 = document.getElementById("img3");
+    let n3 = 1;
+    function changeImage3(){
+        n3++;
+        img3.src = "image/c"+n3+".jpg";
+
+        if(n3 == 3){
+            n3 = 0;
+        }
+    }
+
+    let img4 = document.getElementById("img4");
+    let n4 = 1;
+    function changeImage4(){
+        n4++;
+        img4.src = "image/d"+n4+".jpg";
+
+        if(n4 == 3){
+            n4=0;
+        }
+    }
+
+    let img5 = document.getElementById("img5");
+    let n5 = 1;
+    function changeImage5(){
+        n5++;
+        img5.src = "image/g"+n5+".jpg";
+
+        if(n5 == 3){
+            n5=0;
+        }
+    }
+</script>
+</html>

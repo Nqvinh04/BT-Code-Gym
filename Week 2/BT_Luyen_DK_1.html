@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện Tập Cấu Trúc Câu Điều Kiện</title>
+</head>
+
+<body>
+<h2>Bài 1: Nhập vào 2 số a và b, kiểm tra a chia hết cho b </h2>
+<button onclick="less_1()" id="Number1">Click Me</button>
+<h2>Bài 2: Nhập tuổi và in ra kết quả nếu học sinh đó không đủ tuổi vào lớp 10</h2>
+<button onclick="less_2()" id="Number2">Click Me</button>
+<h2>Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</h2>
+<button onclick="less_3()" id="Number3">Click Me</button>
+<h2>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của 3 số nguyên đó</h2>
+<button onclick="less_4()" id="Number4">Click Me</button>
+<h2>Bài 5: Xếp hạng học lực của học sinh dựa trên  bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</h2>
+<button onclick="less_5()" id="Number5">Click Me</button>
+<h2>Bài 6: Tính hoa hồng nhận được tùy theo mức danh số hàng tháng</h2>
+<button onclick="less_6()" id="Number6">Click Me</button>
+<h2>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</h2>
+<button onclick="less_7()" id="Number7">Click Me</button>
+</body>
+<script>
+     function less_1() {
+
+        let a = parseInt(prompt("nhập số thứ nhất"));
+        let b = parseInt(prompt("nhập số thứ hai"));
+        if (a % b == 0) {
+            alert("a chia hết b")
+        } else {
+            alert("a không chia hết cho b")
+        }
+     }
+     function less_2() {
+         let age = parseInt(prompt("Nhập số tuổi của học sinh:"))
+         if (age <= 15){
+             alert("học sinh không đủ tuổi học lớp 10")
+         } else {
+             alert("học sinh đủ tuổi vào lớp 10")
+         }
+     }
+     function less_3() {
+         let d = parseInt(prompt("Nhập số "))
+         if (d < 0) {
+             alert("Số "+ d +" này nhỏ hơn 0" )
+         } else {
+             alert("Số "+ d +"  này lớn hơn 0")
+         }
+
+     }
+     function less_4() {
+        let e = parseInt(prompt("SỐ Thứ nhất"))
+        let f = parseInt(prompt("Số Thứ Hai"))
+         let g = parseInt(prompt("số Thứ Ba"))
+         if (e < f){
+             if (f < g){
+                 alert(g + " là số lớn nhất")
+             } else {
+                 alert(f + " là số lớn nhất")
+             }
+        } else {
+             alert(e + " là số lớn nhất")
+         }
+      }
+    function less_5() {
+        let test = parseInt(prompt("Điểm kiểm tra"))
+        let midtermtest = parseInt(prompt("Điểm thi giữa kỳ"))
+        let finalexam = parseInt(prompt("Điểm thi cuối kỳ"))
+        mediumscore = ((test + midtermtest + finalexam)/3)
+        if (mediumscore <=5){
+            alert("Học sinh dưới trung bình ")
+        } else if (mediumscore <= 6.5){
+            alert("Học sinh trung bình khá")
+        } else if (mediumscore <= 8 ){
+            alert("Học sinh khá")
+        } else if (mediumscore <= 10){
+            alert("Học sinh giỏi")
+        } else
+            alert("None")
+    }
+    function less_6() {
+        let sales = parseInt(prompt(" Doanh số tháng(triệu):"))
+        if (sales <= 100) {
+            alert("Số hoa hồng bạn nhận được (triệu) là: " + (sales * 0.02))
+        } else if (sales <= 200) {
+            alert("Số hoa hồng bạn nhận được (triệu) là: " + (sales * 0.05))
+        } else {
+            alert("Số hoa hồng bạn nhận được (triệu) là: " + (sales * 0.07))
+        }
+    }
+     </script>
+</html>
