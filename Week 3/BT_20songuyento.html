@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">d b
     <title>Bài tập 20 số nguyên tố</title>
 </head>
 <body>
 
 </body>
 <script>
+    // let n = parseInt(prompt(" Nhập một giá trị để lưu số lượng số nguyên tố cần in ra: "));
+    let count = 0;
+    let N = 2;
+    let i ;
+    let prime = true;
+    while (count < 20){
+            prime = true;
+        for(i = 2; i <= N/2; i++){
+            if (N%i == 0){
+                prime = false;
+                break;
+            }
 
+        }
+    }
+    alert(" 20 số nguyên tố đầu tiên là " + count);
 </script>
 </html>

@@ -2,27 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bài Tập</title>
+    <title>In Dãy Finonaci</title>
 </head>
 <body>
-<h2> Luyện Tập Vòng Lặp 1</h2>
 </body>
 <script>
-
-    let a = 1;
+    let a = 0;
     let b = 1;
+    document.write(a + "<br>");
+    document.write(b + "<br> ");
     let count = 0;
-    document.write(a + ' ');
-    document.write(b + ' ');
-    while (count < 18) {
+    while (count < 100 ){
         let c = a + b;
-        document.write(c + ' ');
+        document.write(c + "<br>");
         a = b;
         b = c;
         count++;
     }
-
-
-
 </script>
 </html>
