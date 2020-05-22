@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="text_dictionary">
+    <input type="button" value="Dịch" onclick="translate()"></input>
+    <p id="result"></p>
+</div>
+</body>
+<script>
+
+
+    function translate() {
+        let English = ["i","love","you",] ;
+        let vietnamese = ["anh","yêu","em"];
+        let a = document.getElementById("text_dictionary").value;
+        let b = false;
+            for ( let i = 0; i < English.length; i++ ) {
+
+                if (a == English[i]) {
+                    b = true;
+                    document.getElementById("result").innerText = "Nghĩa tiếng việt là:" + vietnamese;
+                    break;
+                }
+            }if (b = false){
+                    document.getElementById("result").innerText = " Không có kết quả";
+                }
+            }
+
+
+    
+
+</script>
+</html>
