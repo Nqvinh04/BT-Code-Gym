@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Cho trước một mảng các phần tử số nguyên, viết hàm tính tổng các số lẻ trong mảng đó. </h3>
+</body>
+<script>
+
+    function sumArray(array) {
+        let sum = 0;
+        for ( let i = 0; i < array.length; i++){
+            if (array[i] % 2 !== 0 ) {
+                sum += array[i];
+            }
+        }
+        return sum ;
+    }
+
+    var array_1 = new Array(1,2,3,4,5,6,7,8,9,10);
+    let sum = sumArray(array_1);
+    alert("Tổng số lẻ trong mảng: " + sum);
+</script>
+</html>

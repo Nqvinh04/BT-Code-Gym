@@ -1,0 +1,57 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Bài 3</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--<script>-->
+<!--    // let sum = 0;-->
+<!--    // for ( let a = 1; a <= 10; a++){-->
+<!--    //     sum += a;-->
+<!--    // }-->
+<!--    // alert(sum);-->
+
+
+<!--   -->
+<!--        }-->
+<!--    }-->
+
+<!--</script>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So_nguyen_to</title>
+</head>
+<body>
+<script>
+    let n = parseFloat(prompt('Nhap so luong so nguyen to dau tien'));
+    let c = 1;                               // biến đếm
+    // let checked = true;
+    let N = 2;                              // biến điều kiện
+    while  (c <= n) {
+        if (isCheck(N)) {
+            document.write(N+'<br>');
+            c++;
+        }
+        N++;
+    }
+    function isCheck(a) {                   // Hàm checked
+        let checked = true;
+        for (i = 2;i <= Math.sqrt(a);i++) {
+            if (a % i === 0) {
+                checked = false;
+                break;
+            }
+        }
+        console.log(checked);
+        return checked;
+    }
+</script>
+</body>
+</html>
