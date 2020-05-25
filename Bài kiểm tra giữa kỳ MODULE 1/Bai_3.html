@@ -9,12 +9,20 @@
 </body>
 <script>
 
-     var yearBrith, yearNow;
-     yearNow = 2020; //Lưu năm hiện tại vào biến
-     do {
-         yearBrith = parseInt(prompt("Bạn sinh năm bao nhiêu : ",""));
-     } while (yearBrith > yearNow);
-     alert("Tuổi của bạn bây giờ là : " + (yearNow-yearBrith));
+     // var yearBrith, yearNow;
+     // yearNow = 2020;
+     // do {
+     //     yearBrith = parseInt(prompt("Bạn sinh năm bao nhiêu : ",""));
+     // } while (yearBrith > yearNow);
+     // alert("Tuổi của bạn bây giờ là : " + (yearNow-yearBrith));
+
+    let yearBrith = parseInt(prompt("Bạn sinh năm bao nhiêu : ",""));
+     let yearNow  = new Date().getFullYear();
+     if ( yearBrith > yearNow){
+         alert("không hợp lệ");
+     } else {
+         alert("Tuổi của bạn bây giờ là : " + (yearNow-yearBrith));
+     }
 
 
 </script>
