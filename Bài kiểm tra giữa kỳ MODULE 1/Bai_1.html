@@ -8,18 +8,20 @@
     <p>Enter a number</p>
     <input type="text" name="" id="checkId">
     <button onclick="checkPrime()" >Show</button>
+    <p id="result"></p>
 </body>
 <script>
     function checkPrime() {
         let n = document.getElementById("checkId").value;
         let N = 2;
-        while  (N < n) {
+        let b = "";
+        while (N < n) {
             if (isCheck(N)) {
-                document.write(N+',');
+                b += N + "," ;
             }
             N++;
         }
-
+        document.getElementById("result").innerHTML = b ;
         function isCheck(a) {
             let checked = true;
             for (i = 2;i <= Math.sqrt(a);i++) {

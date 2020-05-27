@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id = "rectangleID" width="1280" height="480" style="border: 1px solid black"></canvas>
+</body>
+<script>
+    function Rectangle(length,width) {
+        this.length = length;
+        this.width = width;
+        // khai báo phương thức
+        this.getlength = function () {
+            return this.length;
+        }
+        this.getwidth = function () {
+            return this.width;
+        }
+        this.getperimeter = function () {
+            return (length + width) * 2;
+        }
+        this.getacreage = function () {
+            return length * width;
+        }
+    };
+
+    function createRectangle() {
+        var ctr = document.getElementById("rectangleID").getContext("2d");
+        // ctr.beginPath();
+        ctr.fillStyle = "#FF0000";
+        ctr.fillRect(90,90,200,50);
+
+
+    }
+    createRectangle();
+    var rectangle = new Rectangle(200,50);
+    let length = rectangle.getlength();
+    let width = rectangle.getwidth();
+    let perimeter = rectangle.getperimeter();
+    let acreage = rectangle.getacreage();
+    alert("Chu vi : " +  perimeter + "     " + " Diện tich : " + acreage );
+
+
+</script>
+</html>

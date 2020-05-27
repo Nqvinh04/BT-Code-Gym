@@ -16,6 +16,7 @@
     let board = [];
     let data = "";
     for (let i = 0; i < 5; i++) {
+        for ()
     board[i] = new Array(".",".",".",".",".");
     }
 
@@ -32,34 +33,34 @@
     data += "<br/><br/><input type='button' value='Player_2' onclick='player_2()'>";
     b.innerHTML = data;
 
-    function player_1() {
-        let positionX = prompt("X: ");
-        let positionY = prompt("Y: ");
-        data = "";
-        board[positionX][positionY] = "x";
-        for (let a = 0; a < 5; a++) {
-            data += "<br/>";
-            for (let b = 0; b < 5; b++) {
-                data += board[a][b] + "&nbsp;&nbsp;&nbsp;&nbsp;";
-            }
-        }
-        data += "<br/><br/><input type='button' value='Player_1' onclick='changeValue()'>"
-        b.innerHTML = "<hr/>" + data;
-    }
-
-    function player_2() {
-        let positionN = prompt("N: ");
-        let positionM = prompt("M: ");
-        data = "";
-        board[positionN][positionM] = "0";
-        for (let i = 0; i < 5; i++) {
-            data += "<br/>";
-            for (let j = 0; j < 5; j++) {
-                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
-            }
-        }
-        data += "<br/><br/><input type='button' value='Player_2' onclick='changeValue()'>"
-        b.innerHTML = "<hr/>" + data;
-    }
+    // function player_1() {
+    //     let positionX = prompt("X: ");
+    //     let positionY = prompt("Y: ");
+    //     data = "";
+    //     board[positionX][positionY] = "x";
+    //     for (let a = 0; a < 5; a++) {
+    //         data += "<br/>";
+    //         for (let b = 0; b < 5; b++) {
+    //             data += board[a][b] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+    //         }
+    //     }
+    //     data += "<br/><br/><input type='button' value='Player_1' onclick='changeValue()'>"
+    //     b.innerHTML = "<hr/>" + data;
+    // }
+    //
+    // function player_2() {
+    //     let positionN = prompt("N: ");
+    //     let positionM = prompt("M: ");
+    //     data = "";
+    //     board[positionN][positionM] = "0";
+    //     for (let i = 0; i < 5; i++) {
+    //         data += "<br/>";
+    //         for (let j = 0; j < 5; j++) {
+    //             data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+    //         }
+    //     }
+    //     data += "<br/><br/><input type='button' value='Player_2' onclick='changeValue()'>"
+    //     b.innerHTML = "<hr/>" + data;
+    // }
 </script>
 </html>

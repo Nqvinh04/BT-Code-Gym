@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <h3>chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng</h3>
 </body>
+    <script>
+        let integer = [5,6,7,8,10,11,2,3,1,13];
+        let max = integer[0];
+        let sum =0;
+        for (let i = 0; i < integer.length; i++){
+            if (integer[i] > max){
+                max = integer[i];
+            }
+            sum += integer[i];
+            medi = (sum/integer.length);
+        }
+        alert("Số lớn nhất: " + max);
+        alert(" Tổng các phần tử trong mảng: " + sum);
+        alert("Giá trị trung bình của các phần tử trong mảng " + medi);
+    </script>
 </html>

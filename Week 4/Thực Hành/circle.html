@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // tạo lớp với phương thức chứa 1 giá trị chuyển vào
+    let circle = function (radius) {
+        this.radius = radius;
+        // this.color = color;
+        // Phương thức trả về bán kính hình tròn
+        this.getRadius = function () {
+            return this.radius;
+        }
+        // Phương thức trả về diện tích hình tròn
+        this.getArea = function () {
+            return Math.PI * radius * radius;
+        }
+    };
+    // tạo đối tượng
+     var myCirle = new circle(2);
+     // truy cập phương thức của lớp hình tròn vừa tạo và gán cho các biến radius và Area
+     let radius = myCirle.getRadius();
+     let Area = myCirle.getArea();
+     alert("Bán kính hình tròn: " + radius + "  " + "Diện tích hình tròn: " + Area);
+
+
+
+</script>
+</html>

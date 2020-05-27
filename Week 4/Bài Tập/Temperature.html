@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    function temperature(tempC) {
+        this.tempC = tempC;
+        this.tempF = function () {
+            return ((9 * tempC)/5 ) + 32;
+        }
+        this.tempK = function () {
+            return tempC + 273;
+        }
+    };
+    var myTemperature = new temperature(25);
+    var TemF = myTemperature.tempF();
+    var TemK = myTemperature.tempK();
+    alert(" Nhiệt độ F: " + TemF + "   " + "Nhiệt độ Kenvin:" + TemK);
+</script>
+</html>

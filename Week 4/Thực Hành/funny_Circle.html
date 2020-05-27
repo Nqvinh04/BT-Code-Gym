@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--tạo một thẻ canvas-->
+<canvas id="canvas" width="1280px" height=" 500px" style="border: 1px solid black"></canvas>
+</body>
+<script>
+   function Circle(x,y,radius){
+        this.x = x;
+        this.y = y;
+        this.radius =  radius;
+   }
+   // Hàm getRandomHex() sẽ sinh ra một số ngẫu nhiên nằm trong khoảng 0-255.
+   function getRandomHex() {
+        return Math.floor(Math.random()*255);
+   }
+   // Hàm getRandomColor() sinh ra màu ngẫu nhiên
+   function getRandomColor() {
+        var red = getRandomHex();
+       var green = getRandomHex();
+       var blue = getRandomHex();
+       return "rgb(" + red + "," + green + "," + blue + ")";
+   }
+   // ve hinh tron co Cx và Cy là các tọa độ của hình tròn.r là bán kính hình tròn
+   // sử dụng phương thức arc : khai báo các tọa độ, bán kính và diện tích hình vuông
+   function  createCircle() {
+        var ctx = document.getElementById("canvas").getContext("2d");
+        // Tạo đối tượng có tạo độ ( x = 500, y = 500, bán kính 80)
+        // var circle = new Circle(500, 500, 80);
+       //----------------------------------------------------------//
+       // sủ dụng hàm Math.random() để tạo một bán kính ngẫu nhiên
+       // bán kính sinh ra trong khoảnh từ 0 - 80
+       var radius = Math.floor(Math.random()*80);
+       var color = getRandomColor();
+       // sinh tọa đồ ngẫu nhiên của hình trong, với 2 thuộc tính window.innerWidth và window.innerHeight
+       var x = Math.random() * window.innerWidth;
+       var y = Math.random() * window.innerHeight;
+       var circle= new Circle(x,y,radius);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0,2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+   }
+   function createMultipleCircle() {
+        for (let i = 0; i < 30; i++){
+            createCircle();
+        }
+   }
+   createMultipleCircle()
+</script>
+</html>

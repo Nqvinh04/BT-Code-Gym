@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="480" height="270" style="border: 1px solid #000000 "></canvas>
+</body>
+<script>
+    let myGameArea ={
+        canvas : document.getElementById("canvas"),
+        start : function f() {
+            this.context = this.canvas.getContext("2d");
+        },
+        clear: function () {
+            this.context.clearRect(0,0, this.canvas.width, this.canvas.height )
+        }
+    }
+    component = function (width, height, color, x, y) {
+        this.width = width;
+        this.height = height;
+        this.color = color;
+        this.speedX = 0;
+        this.speedY = 0;
+        this.x = x;
+        this.y = y;
+
+        this.draw = function () {
+            ctx = myGameArea.context;
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+
+        }
+    }
+
+    let birdGame;
+    function startGame() {
+        birdGame = new component(30,30,"red",10,120)
+        flag = new component(20, 20, "black",200,120)
+        // b
+        myGameArea.draw();
+    }
+</script>
+</html>

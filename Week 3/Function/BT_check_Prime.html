@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bài Tập kiểm tra số nguyên tố</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+    let n = parseFloat(prompt('Nhap so luong so nguyen to dau tien'));
+    // let checked = true;
+    let N = 2;
+    while  (N <= n) {
+        if (isCheck(N)) {
+            document.write(N+'<br>');
+        }
+        N++;
+    }
+    function isCheck(a) {
+        let checked = true;
+        for (i = 2;i <= Math.sqrt(a);i++) {
+            if (a % i === 0) {
+                checked = false;
+                break;
+            }
+        }
+        console.log(checked);
+        return checked;
+    }
+</script>
 </html>
